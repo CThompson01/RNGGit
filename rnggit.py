@@ -24,4 +24,4 @@ def showImage():
             if (image_rgb_data[i][x]):
                 pixels[i,x] = (175, 175, 100)
     img.show()
-    img.save('C:/Users/ct137324/Desktop/RNGGit/example.png')
+    img.save('C:/Users/ct137324/Desktop/RNGGit/' + str(random.randint(0, 999999999)) + '.png')
