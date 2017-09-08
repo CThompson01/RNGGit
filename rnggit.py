@@ -1,4 +1,5 @@
 import random
+import os
 from PIL import Image
 
 image_rgb_data = [[False, False, False, False, False],[False, False, False, False, False],[False,False,False,False,False],[False, False, False, False, False],[False,False,False,False,False]]
@@ -15,6 +16,10 @@ def generateImage():
     
 
 def showImage():
+    file_path = "images/"
+    if not os.path.exists(file_path):
+        os.makedirs(file_path)
+    
     img = Image.new( 'RGB', (500,500), "white")
     pixels = img.load()
     for i in range(img.size[0]):
